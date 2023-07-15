@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+  <head>
+    <title>car rental - niganth</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='sign.css') }}">
+  </head>
+  <body>
+    <div class="banner">
+        
+      <h1>21'CARS</h1>
+
+            <section>
+              <div class="form-box">
+                <div class="form">
+                  <form action="{{ url_for('sign') }}" method="post">
+                    <h2>SIGN IN</h2>
+                    <div class="inputbox">
+                      
+                      <input type="text" name="username" id="username">
+                      <label for="">USERNAME</label>
+                    </div>
+                    
+                    <div class="inputbox">
+                      
+                      <input type="password" name="password" id="password">
+                      <label for="">Password</label>
+                    </div>
+                    <div class="inputbox">
+                      
+                      <input type="password" name="password1" id="password1">
+                      <label for="">Confirm Password</label>
+                    </div>
+                    
+                    <div class="inputbox">
+                      <input type="email" name="email" id="email">
+                      <label>EMAIL</label>
+                    </div>
+                    
+                   
+                    <div class="inputbox">
+                      <input type="tel" id="no">
+                      <label>PHONE NO</label>
+                    </div>
+                    
+                    <div class="radio">
+                      <input type="radio" id="radio">
+                      <label for="">MEN</label>
+                      <input type="radio" id="radio" >
+                      <label for="">WOMEN</label>
+                    </div>
+                    <div class="msg">{{ msg }}</div>
+                    
+                    <button type="submit" value="Submit"></button>
+            
+
+                   
+                  </form>
+                  
+                </div>
+              </div>
+            </section>
+        </div>
+  </body>
+</!DOCTYPE>

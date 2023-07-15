@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>car showroom- niganth</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+    
+  </head>
+  <body>
+ 
+
+    <div class="banner">
+        <div class="navbar">
+            <h1 class="logo">21'cars</h1>
+            <ul> 
+                <li><a href="index.html">HOME</a></li> 
+            </ul>
+           
+        </div>  
+        <div class="container">
+          <h2>CONNECT WITH US</h2>
+          <p>We would love to responde to your queries. Feel free to get in touch with us.</p>
+          <div class="contact-box">
+            <div class="contact-left">
+              <h3>Sent your request</h3>
+              <form action="{{url_for("feedback")}}" method="post">
+                <div class="input-row">
+                  <div class="input-group">
+                    <label>Name</label>
+                    <input type="text" name="name" placeholder="your name">
+                  </div>
+                  <div class="input-group">
+                    <label>PHONE</label>
+                    <input type="text" name="mobile" placeholder="your mobile">
+                  </div>
+                </div>
+                <div class="input-row">
+                  <div class="input-group">
+                    <label>EMAIL</label>
+                    <input type="email" name="email" placeholder="abc@gmail.com">
+                  </div>
+                </div>
+                <label>MESSAGE</label>
+                <textarea  rows="5" name="message" placeholder="Your message"></textarea>
+                <button type="submit">SEND</button>
+              </form>
+            </div>
+            <div class="contact-right">
+              <h3>Reach us</h3>
+
+              <table>
+                
+                <tr>
+                  
+                </tr>
+                <tr>
+                  <td>EMAIL</td>
+                  <td>niganth21@gmail.com</td>
+                </tr>
+                <tr>
+                  <td>PHONE</td>
+                  <td> +91 720 081 6342</td>
+                </tr>
+                <tr>
+                  <td>ADDRESS</td>
+                  <td> 2/22c gandhi road<br>race course<br> coimbatore-62</td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+        </div>
+         
+    </div>
+    <section>
+      <div class="socialmedia">
+      
+      </div>
+    </section>
+    
+</body>
+</html>

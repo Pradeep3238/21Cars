@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8" />
+    <title>Booking Details</title>
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f3f3f3;
+          margin: 0;
+          padding: 20px;
+          text-align:center;
+      }
+
+      h1 {
+          color: #333;
+          text-align: center;
+          margin-top: 20px;
+      }
+
+      h2 {
+          color: #666;
+          margin-top: 30px;
+      }
+
+      table {
+          width: 100%;
+          max-width: 600px;
+          margin: 20px auto;
+          border-collapse: collapse;
+          background-color: #fff;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      th, td {
+          padding: 10px;
+          text-align: left;
+          border-bottom: 1px solid #ddd;
+      }
+
+      th {
+          background-color: #f5f5f5;
+      }
+
+      a {
+          display: inline-block;
+          padding: 10px 20px;
+          background-color: #333;
+          color: #fff;
+          text-decoration: none;
+          border-radius: 5px;
+          margin-top: 20px;
+      }
+
+      a:hover {
+          background-color: #555;
+      }
+  </style>
+</head>
+<body>
+    <h1>Booking Details</h1>
+    <h2>Enjoy Your Ride </h2>
+    <table>
+        <tr>
+            <th>Username</th>
+            <td>{{ user.username }}</td>
+        </tr>       
+         <tr>
+          <th>Email</th>
+          <td>{{ user.email }}</td>
+        </tr>
+        <tr>
+            <th>Car Name</th>
+            <td>{{ user.carname }}</td>
+        </tr>
+        <tr>
+            <th>Features</th>
+            <td>{{ user.features }}</td>
+        </tr>
+        <tr>
+            <th>Location</th>
+            <td>{{ user.location }}</td>
+        </tr>
+        <tr>
+          <th>ownerdetails</th>
+          <td>{{ user.ownerdetails }}</td>
+        </tr>
+    </table>
+
+    <!-- Add any additional content or buttons for the booking details page here -->
+</body>
+</html>

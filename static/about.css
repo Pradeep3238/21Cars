@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.navbar ul li {
+   list-style: none;
+   display: inline-block;
+   margin: 0 20px;
+   position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #22438c;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    bottom: -10px;
+    transition: 0.5s;
+    
+}
+.navbar ul li:hover::after {
+    width: 100%;
+}
+.logo{
+    color: black;
+    width: 120px;
+    cursor: pointer;
+}
+.about{
+    color: black;
+    text-align:left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.about h2{
+    
+    text-align: center;
+}
+.destination
+{
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: left;
+    color: black;
+}
+.destination h2{
+    
+    text-align: center;
+}
+.hell{
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: left;
+    color: black;
+}
+.hell h2{
+    
+    text-align: center;
+}
+.hello
+{
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: left;
+    color: black;
+}
+.hello h2{
+    
+    text-align: center;
+}

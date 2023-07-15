@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+    <head>
+        <title> 21 cars</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+        
+    </head>
+    <body>
+        <div class="banner">
+          <section>
+            <div class="navbar">
+                <h1 class="logo">21'CARS</h1>
+    
+               
+               
+                <ul>
+                    <li>
+                    {% if username %}
+                      
+                      <!-- Your home page content -->
+                      <!-- Display any other user-specific information or actions -->
+                      <p><a href="{{ url_for('logout') }}"><h1>Welcome, {{ username }}!</h1></a></p>
+                    {% else %}
+                      <h1>Welcome to the Home Page</h1>
+                      <!-- Your home page content -->
+                      <p><a href="{{ url_for('login') }}">Login</a></p>
+                    {% endif %}</li>
+                    <li><a href="{{url_for('about')}}">ABOUT US</a></li>
+                    <li>
+                        <a href="{{url_for('location')}}">OUR  LOCATIONS </a>
+                       
+                    </li>
+    
+    
+                    <li>
+                        <a href="{{url_for('contact')}}">Contacts</a>
+                   
+                    </li>
+    
+                    
+    
+                    
+                </ul>
+            </div> 
+          </section> 
+            <div class="text">
+              <p>NEW <br>ARRIVALS</p>
+            </div>
+            
+            <div class="slider">
+                
+                <span id="slide-1"></span>
+                <span id="slide-2"></span>
+                <span id="slide-3"></span>
+                <div class="image-container">
+                  <a href="budget.html"><img src="/static/i20.webp" class="slide" width="500" height="300" /></a>
+                  <a href="lux.html"><img src="/static/bmw.jpg" class="slide" width="500" height="300" /></a>
+                  <a href="seden.html"><img src="/static/superb-exterior-right-front-three-quarter.jpeg" class="slide" width="500" height="300" /></a>
+                </div>
+                <div class="buttons">
+                  <a href="#slide-1"></a>
+                  <a href="#slide-2"></a>
+                  <a href="#slide-3"></a>
+                </div>
+              </div>
+              <h2>WHY 21'CARS?</h2>
+              <section>
+              
+                <div class="box">
+                    <div class="one">
+                        <img src="/static/one.png" width="275" height="175">
+                        <h3>12-Month Warranty</h3>
+                        <p>Enjoy peace of mind <br>with our 12 month<br> Warranty that is <br>standard across all cars <br>that we sell</p>
+                    </div>
+                    <div class="two">
+                        <img src="/static/two.png" width="275" height="175">
+                        <h3>7-Day Return</h3>
+                        <p>Love it, keep it. Changed your<br> mind? Return it within 7 days for<br> a full refund</p>
+                    </div>
+                    <div class="three">
+                        <img src="/static/three.png" width="275" height="175">
+                        <h3>Easy Financing Options</h3>
+                        <p>Become eligible for Zero Down <br> Payment via EMIs of up<br> to 72 months and<br> instant loans</p>
+                    </div>
+
+                    <div class="four">
+                        <img src="/static/four.png" width="275" height="175">
+                        <h3>140-Quality Checks</h3>
+                        <p>Inspected across 140 parameters <br>and refurbished by auto-experts,<br> our cars are ready<br> for the road</p>
+                    </div>
+                </div>
+
+          </section>
+              
+              <section>
+                <div class="cars">
+                    <h2>VIEW OUR CARS ↓ </h2>
+                    <div class="budget">  
+                        <h3>BUDGET SEGMANT</h3>  
+                        <a href="budget.html"><img src="/static/2023-Maruti-Swift-rendering.jpg"  width="250" height="150"/></a>
+                        <a href="budget.html"><img src="/static/baleno.jpeg" width="250" height="150"/></a>
+                        <a href="budget.html"><img src="/static/i20.webp" width="250" height="150"/></a>
+                    </div>
+                    <div class="seden">  
+                        <h3>SEDEN SEGMANT</h3>  
+                        <a href="seden.html"><img src="/static/superb-exterior-right-front-three-quarter.jpeg" width="250" height="150"/></a>
+                        <a href="seden.html"><img src="/static/verna-exterior-left-front-three-quarter.jpeg" width="250" height="150"/></a>
+                        <a href="seden.html"><img src="/static/virtus.webp" width="250" height="150"/></a>
+                    </div>
+                    <div class="luxury">  
+                        <h3>LUXURY SEGMANT</h3>  
+                        <a href="lux.html"><img src="/static/bm.jpg" width="250" height="150"/></a>
+                        <a href="lux.html"><img src="/static/xc90.webp" width="250" height="150"/></a>
+                        <a href="lux.html"><img src="/static/class.jpeg" width="250" height="150" /></a>
+                    </div>
+                </div>
+              </section>
+              <section>
+                
+                <div class="cat">
+                  <h2>Used cars by category</h2>
+                  <ul>
+                      <li><a href="budget.html">Under <br> 3 lakh</a></li>
+                      <li><a href="budget.htnk">From <br>3-5 Lakh</a></li>
+                      <li><a href="seden.html">From <br>5-7 Lakh</a></li>
+                      <li><a href="seden.html">From <br>7-10 Lakh</a></li>
+                      <li><a href="lux.html">Above <br>10 Lakh</a></li>
+                      
+                  </ul>
+                  
+                </div>
+              </section>
+              <section>
+                {% for posts in posts%}
+                <div class="blog-container">
+                    <div class="blog-post">
+                      <div  class="oii" style="margin: 2px 2px 2px 2px;">
+                        {% if posts[5] %}
+                        <img src="{{ url_for('static',filename=posts[5].replace("\\","/")) }}" style="max-width:100px;max-height:100px;" alt="Blog Image">
+                        {% endif %}     
+                      </div>
+                          <p ><strong>CAR NAME :</strong>   {{ posts[1] }}</p>
+                          <p><strong>FEATURES :</strong>   {{ posts[2] }}</p>
+                          <p><strong>OWNER DETAILS :</strong>   {{ posts[3] }}</p>
+                          <p><strong>LOCATION :</strong>  {{ posts[4] }}</p>
+                          <a href={{url_for('booking_details',car_id=posts[0])}}>Book a drive</a>
+                     </div>
+                     
+                  </div>
+            {% endfor %}
+              </section>
+
+              <footer>
+                <div class="footer">
+                <div class="row">
+                <a href="https://www.facebook.com/index.php"><i class="fa fa-facebook"></i></a>
+                <a href="https://instagram.com/niganth21?igshid=YmMyMTA2M2Y="><i class="fa fa-instagram"></i></a>
+                <a href="https://www.bing.com/videos/search?q=you+tube.com&qpvt=you+tube.com&FORM=VDRE"><i class="fa fa-youtube"></i></a>
+                <a href="https://twitter.com/?lang=en-in"><i class="fa fa-twitter"></i></a>
+                </div>
+                
+                <div class="row">
+                 Copyright © 2023 nixxcorp - All rights reserved || Designed By: Niganth 
+                </div>
+                </div>
+                </footer>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        
+    </body>
+</html>
+
+<!---<div class="slideshow-container">
+
+               <h3>NEW ARRIVALS</h3>
+                <div class="mySlides fade">
+                  <img src="baleno.jpeg" style="width:100%">
+                  <div class="text">BALENO</div>
+                </div>
+              
+                <div class="mySlides fade">
+                  <img src="superb-exterior-right-front-three-quarter.jpeg" style="width:100%">
+                  <div class="text">SUPERB</div>
+                </div>
+              
+                <div class="mySlides fade">
+                  <img src="verna-exterior-left-front-three-quarter.jpeg" style="width:100%">
+                  <div class="text">VERNA</div>
+                </div>
+              
+                 Next and previous buttons 
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
+              <br>
+              
+             The dots/circles 
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+              </div>-->
+
+
